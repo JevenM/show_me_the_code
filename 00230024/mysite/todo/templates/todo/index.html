@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    {% load static %}
+    <script src="{% static 'todo/jquery.min.js' %}"></script>
+</head>
+<body>
+    <div id="bigbox" align="center">
+        <h1>QuickStart示例</h1><span>TodoList应用演示</span>
+        <br><br>
+        <table bgcolor="#7fffd4" align="center" border="1px" cellspacing="0" width="500">
+            <tr align="center">
+                <th width="250">任务</th>
+                <th width="250">管理</th>
+            </tr>
+            {% for task in tasks %}
+                <tr align="center">
+                    <td>{{ task.task_desc }}</td>
+                    <td><a href="{% url 'todo:delete' task.id %}">删除</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    <br>
+        <div id="bottom">
+            <input type="button" value="创建任务" onclick="showForm()">
+            <br><br>
+            <form action="{% url "todo:add" %}" method="post" id="form" onsubmit="return check()">
+                {% csrf_token %}
+                任务：<input type="text" id="desc" placeholder="输入任务" name="desc">
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#form').hide();
+    });
+
+    function showForm(){
+        $('#form').show();
+        $('#bottom').append("");
+        $('#desc').focus();
+    }
+
+    function check() {
+        let desc = document.getElementById('desc').value;
+        if (desc == '') {
+            alert('不能为空！');
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

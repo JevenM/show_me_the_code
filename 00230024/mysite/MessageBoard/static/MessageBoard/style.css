@@ -1,0 +1,53 @@
+li, p, a, h1, h2, h3, span, label, strong{
+    font-family: "Microsoft YaHei UI Light", Sans-Serif, serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+
+#title{
+    font-size: 32px;
+    font-family: "Microsoft YaHei UI Light", Sans-Serif, serif;
+    color: #fff;
+    background: darkblue;
+    width: 100%;
+    line-height: 42px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+#LeaveMessage{
+    box-sizing: border-box;
+    padding-left: 40px;
+    background: cornflowerblue;
+    padding-bottom: 20px;
+}
+
+#messageList{
+    box-sizing: border-box;
+    padding: 20px 40px 20px 0;
+    background: #eee;
+    width: 100%;
+}
+li{
+    height: 56px;
+}
+
+#nameAndTime{
+    color: #333;
+    font-weight: bold;
+}
+
+#perContent{
+    color: darkred;
+    background-color: palegreen;
+    display: block;
+    margin-top: 5px;
+}

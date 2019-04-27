@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+li, a, p, span, div, table, tr, th, td{
+    font-family: "Microsoft YaHei UI Light", serif, Sans-Serif;
+}
+
+#bottom{
+    margin-top: 20px;
+    background-color: #eeeeee;
+}

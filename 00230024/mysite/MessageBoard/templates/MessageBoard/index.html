@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Board</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'MessageBoard/style.css' %}">
+</head>
+<body>
+    <div id="title">
+        留言簿
+    </div>
+    <div id="LeaveMessage">
+        <h3>请尽情留言吧</h3>
+        <br>
+        <form action="{% url 'MessageBoard:postmessages' %}" method="post" onsubmit="return checkForm();">
+            {% csrf_token %}
+            <label for="name">姓名：</label>
+            <input type="text" name="name" id="name">
+            <br><br>
+            <label for="content">内容：</label>
+            <textarea cols="120" rows="8" name="content" id="content"></textarea>
+            <br><br>
+            <input type="submit" value="提交">
+            <br>
+        </form>
+    </div>
+
+    <div id="messageList">
+        <h3 style="padding-left: 40px">留言历史信息</h3>
+        {% if commenter_list%}
+            <ul>
+                {% for commenter in commenter_list %}
+                    <li>
+                        <p id="nameAndTime">{{ commenter.commenter_name }} 留言于（{{ commenter.commenter_time }}）</p>
+                        <span id="perContent">{{ commenter.commenter_content }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No messages are available.</p>
+        {% endif %}
+    </div>
+<script>
+    function checkForm(){
+        let name = document.getElementById("name").value;
+        let content = document.getElementById("content").value;
+        if(name === "" || name == null || content == null || content === ''){
+            alert('请输入表单再提交！');
+            document.getElementById("name").focus();
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

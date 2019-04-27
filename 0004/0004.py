@@ -1,0 +1,13 @@
+﻿# -*- coding: utf-8 -*-
+import re
+
+def count(filepath):
+    f = open(filepath, 'rb')
+    s = f.read().decode('utf-8')
+    words = re.findall(r'[a-zA-Z0-9]+', s)
+    return len(words)
+
+if __name__ == '__main__':
+    num = count('text.txt')
+    print("总共: %d" % num)
+

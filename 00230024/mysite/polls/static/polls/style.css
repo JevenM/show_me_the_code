@@ -1,0 +1,16 @@
+p, a, li{
+    font-size: 30px;
+    font-family: "Microsoft YaHei UI";
+}
+ul li{
+    list-style-type: none;
+}
+li a {
+    color: green;
+    text-decoration: none;
+}
+body{
+    background: white url("images/background.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

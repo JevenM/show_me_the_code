@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>我的第一个html</title>
+
+  <style type="text/css">
+/*很重要*/
+   table tr td,th{
+    border:1px solid #000;}  
+
+  p{
+   font-size:20px;/*设置文字字号*/
+   color:red;/*设置文字颜色*/
+   font-weight:bold;/*设置字体加粗*/
+  }
+span{
+   color:blue;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>&nbsp;&nbsp;<font color="#FF0000">Jeven毛哥</font></h1>
+
+<hr   />
+
+<ul>
+  <li><h2>《江雪》<h2></li>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;柳宗元</p>
+  <p>
+     &nbsp;<strong>千山鸟飞绝, <br />
+    &nbsp;万径人踪灭。<br />
+    &nbsp;孤舟蓑笠翁，<br />
+    &nbsp;独钓寒江雪。</strong>
+  </p>
+    <strong><span>下面是李白的——</span><br />&nbsp;&nbsp;&nbsp;&nbsp;《关山月》：</strong>
+    <blockquote>明月出天山， <br />苍茫云海间。 <br />长风几万里， <br />吹度玉门关。 <br />汉下白登道， <br />胡窥青海湾。 <br />由来征战地， <br />不见有人还。 <br />戍客望    边色， <br />思归多苦颜。 <br />高楼当此夜， <br />叹息未应闲。 <br /></blockquote>
+     <li><h2>我们还可以训练怎样制作表格</h2></li>
+<br />
+<table summary="这个表格记录我们的信息。">
+  <caption><span>209右成员信息</span></caption>
+<tbody>
+   <tr>
+      <th>班级</th>
+      <th>姓名</th>
+      <th>考号</th>
+   </tr>
+   <tr>
+      <td>1班</td>
+      <td>毛文杰</td>
+      <td>15130120170</td>
+   </tr>
+   <tr>
+      <td>2班</td>
+      <td>武春韬</td>
+      <td>15130120171</td>
+   </tr>
+   <tr>
+      <td>3班</td>
+      <td>胡皓</td>
+      <td>15130120169</td>
+   </tr>
+   <tr>
+      <td>4班</td>
+      <td>李文琪</td>
+      <td>15130120172</td>
+   </tr>
+</tbody>
+</table>
+<hr />
+     <li><h2>软件团委部门</h2></li>
+<br />
+   <ol>
+     <li>实践部</li>
+     <li>组织部</li>
+     <li>活动部</li>
+   </ol>
+<hr />
+  <strong>孔子云：</strong>
+          &nbsp;&nbsp;<q>学而时习之，不亦说乎？</q>
+  <li><h2>福利<h2></li>
+      <p>欢迎观看各种好看电影<br />网址：</p>
+          <em><a href="http://www.k1k.cc/" title="点击进入k1k电影网！" target="_blank">k1k电影</a></em><br /><br />
+</ul>
+
+<strong><p>例如《进击的巨人》：</p></strong>
+
+<a href="http://b.hiphotos.baidu.com/zhidao/pic/item/9c16fdfaaf51f3decdcf9b8395eef01f3b2979d3.jpg" title="电影《进击的巨人》" target="_blank">
+  <img src="http://b.hiphotos.baidu.com/zhidao/pic/item/9c16fdfaaf51f3decdcf9b8395eef01f3b2979d3.jpg"title="电影《进击的巨人》海报">
+</a><br />
+<a href="mailto:2446026601@qq.com?" subjet="观看《进击的巨人》有感。body=你好，看完《进击的巨人》，我感触很深。">对此电影有何感想，发邮件给我。</a>
+<form method="post" action="save.php">
+    
+   <label><span>性别:</span></label>
+
+    <label>男</label>
+      <input type="radio" value="1"  name="gender" />
+    <label>女</label>
+      <input type="radio" value="2"  name="gender" />
+    <br />
+      <label for="username">用户名:</label>
+
+      <input type="text"  name="username" id="username" value="" />
+
+      <label for="pass">密码:</label>
+
+      <input type="password"  name="pass" id="pass" value="" />    
+      <input type="submit" value="确定"  name="submit" />
+      <input type="reset" value="重置" name="reset" />
+</form>
+<form action="save.php" method="post" >
+   <label><span>个人简介：</span></label><br />
+     <textarea cols="50" rows="10">在这里输入内容...</textarea>
+<br />
+     <input type="submit" value="确定"  name="submit" />
+     <input type="reset" value="重置"  name="reset" />
+<br />
+   <label>你的爱好:</label>
+     <select>
+       <option value="看书">看书</option>
+       <option value="旅游" selected="selected">旅游</option>
+       <option value="运动">运动</option>
+       <option value="购物">购物</option>
+     </select>  
+    <input type="submit" value="确定"  />
+    <input type="submit" value="提交"  />
+  你对什么运动感兴趣：<br />
+  <label for="jog">慢跑</label>
+  <input type="checkbox" name="jog" id="jog" /><br />
+  <label for="climb">登山</label>
+  <input type="checkbox" name="climb" id="climb" /><br />
+  <label for="basketball">篮球</label>
+  <input type="checkbox" name="basketball" id="basketball" />
+</form> 
+</body>
+</html>
